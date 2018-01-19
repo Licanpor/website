@@ -1,0 +1,199 @@
+.projects_wrapper
+  width 840px
+  margin 0 auto
+  padding 5% 0
+  .projects_heading
+    letter-spacing 10px
+    text-align center
+    margin-bottom 50px
+
+  ul
+    padding 0 100px
+    margin 0 0 50px
+    width 100%
+    &:after
+      content ""
+      display table
+      clear both
+
+  li
+    perspective 400px
+    position relative
+    float left
+    width 200px
+    height 200px
+    margin 5px
+    padding 0
+    list-style none
+    background-color #fff
+    border-radius 4px
+
+    .project_item
+      total-center()
+      width 100%
+      height 100%
+      border-radius 4px
+      box-shadow inset 0 2px 20px rgba($darkBaseRGB,0.2)
+      background-size cover
+      background-repeat no-repeat
+
+      .project_img
+        width 100%
+        height 100%
+        background-position center
+        background-repeat no-repeat
+
+    .project_info
+      transform rotate3d(1, 0, 0, 90deg)
+      width 100%
+      height 100%
+      padding 20px
+      position absolute
+      top 0
+      left 0
+      border-radius 4px
+      pointer-events none
+      background-color rgba($mainDetailRGB, 0.9)
+
+      h3
+        margin-bottom 10px
+        font-size remify(20)
+        color rgba($lightBaseRGB, 0.9)
+      p
+        font-size remify(14)
+        color rgba($lightBaseRGB, 0.9)
+
+.rn-top .project_info 
+  transform-origin 50% 0
+  animation rn-top $duration $timing-fn 0ms 1 forwards
+
+.rn-right .project_info 
+  transform-origin 100% 0
+  animation rn-right $duration $timing-fn 0ms 1 forwards
+
+.rn-bottom .project_info 
+  transform-origin 50% 100%
+  animation rn-bottom $duration $timing-fn 0ms 1 forwards
+
+.rn-left .project_info 
+  transform-origin 0 0
+  animation rn-left $duration $timing-fn 0ms 1 forwards
+
+.out-top .project_info
+  transform-origin 50% 0
+  animation out-top $duration $timing-fn 0ms 1 forwards
+
+.out-right .project_info 
+  transform-origin 100% 50%
+  animation out-right $duration $timing-fn 0ms 1 forwards
+
+.out-bottom .project_info 
+  transform-origin 50% 100%
+  animation out-bottom $duration $timing-fn 0ms 1 forwards
+
+.out-left .project_info 
+  transform-origin 0 0
+  animation out-left $duration $timing-fn 0ms 1 forwards
+
+
+@keyframes rn-top 
+  from
+    transform rotate3d(-1,0,0, 90deg)
+  to
+    transform rotate3d(0,0,0, 0deg)
+@keyframes rn-right 
+  from
+    transform rotate3d(0,-1,0, 90deg)
+  to
+    transform rotate3d(0,0,0, 0deg)
+@keyframes rn-bottom 
+  from
+    transform rotate3d(1,0,0, 90deg)
+  to
+    transform rotate3d(0,0,0, 0deg)
+@keyframes rn-left 
+  from
+    transform rotate3d(0,1,0, 90deg)
+  to
+    transform rotate3d(0,0,0, 0deg)
+
+@keyframes out-top 
+  from
+    transform rotate3d(0,0,0, 0deg)
+  to
+    transform rotate3d(-1,0,0, 104deg)
+@keyframes out-right 
+  from
+    transform rotate3d(0,0,0, 0deg)
+  to
+    transform rotate3d(0,-1,0, 104deg)
+@keyframes out-bottom 
+  from
+    transform rotate3d(0,0,0, 0deg)
+  to
+    transform rotate3d(1,0,0, 104deg)
+@keyframes out-left 
+  from
+    transform rotate3d(0,0,0, 0deg)
+  to
+    transform rotate3d(0,1,0, 104deg)
+
+.item_1
+  background linear-gradient(to right, #ED3F6A , #F6983D)
+  .project_img
+    background-image url('../img/logos/kii-logo.svg')
+    background-size 35%
+.item_2
+  background-color #212121
+  .project_img
+    background-image url('../img/logos/teec-logo.png')
+
+.item_3
+  background-image linear-gradient(to right, #C300FF 0, #25F9C7 100%)
+  .project_img
+    background-image url('../img/logos/flirt-logo.svg')
+    background-size 60%
+
+.item_4
+  background-image url('../img/bgds/cierralo-bgd.png')
+  background-position top
+
+  .project_img
+    background-image url('../img/logos/cierralo-logo.png')
+    background-size 60%
+
+.item_5
+  background-image url('../img/bgds/capturalo-bgd.jpg')
+
+  .project_img
+    background-image url('../img/logos/capturalo.png')
+    background-size 80%
+
+.item_6
+  background-image url('../img/bgds/more-bgd.jpg')
+  background-position bottom center
+
+  .project_img
+    background-image url('../img/logos/more-logo.svg')
+    background-size 70%
+
+.item_7
+  background-image url('../img/bgds/working-bgd.png')
+  background-position right center
+
+  .project_img
+    background-image url('../img/logos/working-logo.png')
+    background-size 70%
+
+.item_8
+  background-image url('../img/bgds/rer-bgd.jpg')
+
+  .project_img
+    background-image url('../img/logos/rer-logo.png')
+    background-size 80%
+
+.item_9
+  background-image linear-gradient(to right, #F1F1F1 0, #93d2c7 100%)
+  .project_img
+    background-image url('../img/logos/indots-logo.png')
+    background-size 80%

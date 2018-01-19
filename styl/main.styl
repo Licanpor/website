@@ -1,0 +1,357 @@
+@import vars
+@import mixins
+@import fonts
+@import base
+@import test
+
+
+
+/* NAVBAR */
+.bordered_section
+  border 1px solid $secondDetail
+  height 100%
+  width 100%
+  padding 30px 0
+  total-center()
+  flex-direction column
+
+.site_navbar
+  height 65px
+  width 100%
+  padding 0 20px
+  background-color $darkBase
+  color $lightBase
+  display flex
+  align-items center
+  justify-content space-between
+  a
+    margin 0 auto
+
+.navbar_logo-wrapper
+  height 100%
+  width 280px
+  margin 0 auto
+  total-center()
+  svg
+    position absolute
+  &:hover
+    .svg-shape
+      stroke-width 2px
+      stroke-dashoffset 0
+      stroke-dasharray 760
+    .svg-text
+      font-weight $regular
+
+  .svg-shape
+    stroke-dasharray 45 653
+    stroke-dashoffset -438
+    stroke-width 5px
+    fill transparent
+    stroke $mainDetail
+    border-bottom 5px solid black
+    transition stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s
+
+  .svg-text
+    font-size remify(18)
+    line-height 32px
+    letter-spacing 4px
+    color $lightBase
+// --------------------------------------
+
+/* COVER */
+
+.site_cover
+  background-image url("../img/bgds/cover_bgd.jpg")
+  background-attachment fixed
+  background-position 60% 102%
+  background-repeat no-repeat
+  background-size 165%
+  padding 10% 6% 20% 6%
+  position relative
+  total-center()
+  flex-direction column
+  &:before
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    right 0
+    z-index -1
+.cover_blockquote
+  height 90vh
+  margin-left 40%
+  position relative
+  text-align right
+  color $lightBase
+  &:after
+    content ''
+    position absolute
+    width 5px
+    height 40%
+    top -15px
+    right -15px
+    background-color rgba($mainDetailRGB, 0.8)
+  .quote_heading
+    word-spacing 2px
+  .quote_author
+    margin 20px 0
+    line-height 1.5
+    word-spacing 2px
+.cover_about
+  margin-top 60px
+  margin-left auto
+  width 66%
+  color $lightBase
+  text-align right
+  line-height 1.5
+  word-spacing 4px
+  .lab_sign
+    color #f7b617
+// --------------------------------------
+
+/* ABOUT SECTION */
+
+.about_wrapper
+  width 100%
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  margin 20px 0
+  padding 5%
+  height 100%
+  .about_left-container,
+  .about_right-container
+    width 50%
+    padding 0 4%
+  .about_left-container
+    total-center()
+    flex-direction column
+    h1
+      text-align center
+      margin-bottom 30px
+      letter-spacing 16px
+    h3
+      text-align justify
+      word-spacing 1px
+      line-height 1.4
+  .about_right-container
+    text-align justify
+    h2
+      text-align center
+      margin-bottom 30px
+      letter-spacing 10px
+    p
+      text-align justify
+      word-spacing 1px
+      line-height 1.4
+.about_cv-wrapper
+  width 100%
+  background-color $darkBase
+  color $lightBase
+  padding 35px 30px
+  flex-direction column
+  .cv-heading
+    letter-spacing 8px
+.cv-btn-container
+  total-center()
+  margin-top 30px
+  .cv-btn
+    height 30px
+    width 120px
+    position relative
+    total-center()
+    color: $lightBase
+    box-sizing border-box
+    transform-style preserve-3d
+    transition all 500ms ease
+    h5
+      letter-spacing 2px
+    &:after
+      top -100%
+      left 50%
+      position absolute
+      content '\f019'
+      font-family FontAwesome
+      color $lightBase
+      font-size remify(30)
+      font-style normal
+      font-weight normal
+      text-decoration inherit
+      transform-origin left bottom
+      transform rotateX(90deg) translateX(-50%)
+    &:hover
+      transform-origin center bottom
+      transform rotateX(-90deg) translateY(100%)
+// --------------------------------------
+
+/* SKILLS SECTION */
+
+.skills_wrapper
+  width 100%
+  margin-top 20px
+  padding 7% 0
+  height 100%
+  .skills_heading
+    text-align center
+    letter-spacing 10px
+    margin-bottom 15px
+
+  .skills_main-row
+    width 80%
+    margin 40px auto
+    display flex
+    flex-direction row
+    .skill_item-container
+      width 33.33%
+      total-center()
+      .skill_item
+        border-radius 50%
+        width 150px
+        height 150px
+        padding 5%
+        .skill_porcentage
+          width 100%
+          height 100%
+          position relative
+          img
+            position absolute
+            transform translate(-50%, -50%)
+            left 50%
+            top 50%
+            width 80%
+          img.hide_skill_icon
+            opacity 0
+            transform scale(0.1, 0.1)
+            transition all $duration $timing-fn
+  .skills_extra-btn
+    text-align center
+    font-size remify(25)
+    color $darkBase
+    total-center()
+    flex-direction column
+    width 15%
+    padding 5px 0
+    margin 10px auto 30px auto
+    p
+      font-size remify(16)
+      letter-spacing 2px
+    .extra_icon
+      border-radius 50%
+      cursor pointer
+      width 35px
+      height 30px
+      margin-top 10px
+      position relative
+      box-shadow 0 1px 0 0 rgba($darkBaseRGB, 0.35)
+      transition all 1s ease
+      img
+        width 38.5%
+        animation-duration 3s
+        animation-delay 4s
+        animation-iteration-count infinite
+    .extra_icon-rotated
+      transform rotate(180deg)
+      transition all 1s ease
+
+  .skills_extra-row
+    total-center()
+    flex-flow wrap row
+    width 100%
+    height 0
+    overflow hidden
+    transition all 1s ease
+  .extra_item
+    width 100px
+    height 100px
+    total-center()
+    padding 10px
+    margin-bottom 20px
+    img
+      width 30%
+
+  .skills_extra-row_open
+    height 24rem
+  .skills_blockquote
+    position relative
+    width 100%
+    text-align center
+    margin-top 100px
+    &:after
+      content ''
+      position absolute
+      width 70%
+      height 5px
+      top -25%
+      left 50%
+      transform translateX(-50%)
+      background-color rgba($mainDetailRGB, 0.8)
+    &:before
+      content ''
+      position absolute
+      width 20%
+      height 6px
+      bottom -13px
+      left 50%
+      transform translateX(-50%)
+      background-color rgba($mainDetailRGB, 0.8)
+    .quote_author
+      margin 20px 0
+    .quote_heading
+      letter-spacing 1px
+/* PROJECTS SECTION */
+
+
+/* FOOTER */
+  .footer_container
+    background-color $darkBase
+    color $lightBase
+    padding 3% 7%
+    total-center()
+    flex-flow column
+    width 100%
+    .footer_social-media
+      display flex
+      margin 30px 0
+      .media_icon-wrapper
+        width 60px
+        height 60px
+        margin 10px
+        border-radius 50%
+        background-color #003538
+        color $secondDetail //#005a5f
+        font-size remify(30)
+        a
+          total-center()
+          width 100%
+          height 100%
+          border-radius 50%
+          transition all $duration ease-in-out
+          &:hover
+            color $lightBase
+            transition all $duration ease-in-out
+    .footer_availability
+      text-align center
+      h3
+        margin 30px 0 20px 0
+    .footer_info
+      width 100%
+      total-center()
+      flex-direction row
+      justify-content space-between
+      color $secondDetail
+      i
+        font-size remify(14)
+      .footer_phone
+        a
+          total-center()
+          transition all $duration ease-in-out
+          i
+            font-size remify(20)
+          p
+            word-spacing 3px
+            margin-left 10px
+          &:hover
+            color $lightBase
+            transition all $duration ease-in-out
+// --------------------------------------
