@@ -1197,7 +1197,10 @@ template {
     width: 100%;
   }
   .projects_wrapper ul {
-    padding: 0 27px;
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
   .projects_wrapper li {
     perspective: 340px;
