@@ -106,8 +106,12 @@
   text-align right
   line-height 1.5
   word-spacing 4px
-  .lab_sign
-    color #f7b617
+  a
+    width 185px
+    height 46px
+    display -webkit-inline-box
+    img
+      width 185px
 // --------------------------------------
 
 /* ABOUT SECTION */
@@ -264,11 +268,17 @@
   .extra_item
     width 100px
     height 100px
+    margin 0 20px
     total-center()
     padding 10px
     margin-bottom 20px
     img
-      width 30%
+      width 100%
+    &:focus
+      outline transparent !important
+
+  .slick-slide:focus
+    outline transparent !important
 
   .skills_extra-row_open
     height 24rem
@@ -291,7 +301,7 @@
       position absolute
       width 20%
       height 6px
-      bottom -13px
+      bottom -15px
       left 50%
       transform translateX(-50%)
       background-color rgba($mainDetailRGB, 0.8)
@@ -338,7 +348,7 @@
       width 100%
       total-center()
       flex-direction row
-      justify-content space-between
+      justify-content flex-end
       color $secondDetail
       i
         font-size remify(14)
