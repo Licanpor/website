@@ -218,7 +218,16 @@ $(document).ready(function(){
     arrows: false,
     speed: 2500,
     pauseOnHover:false,
-    pauseOnFocus:false
+    pauseOnFocus:false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplaySpeed: 300
+        }
+      }
+    ]
   });
-
 });
